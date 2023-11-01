@@ -1,5 +1,7 @@
 import { sql } from "@vercel/postgres";
+export const revalidate=0
 export default async function Courses() {
+    
     // const courses = [
     //     { title: "Curso de HTML", url: "/img/html.svg", description: "O curso é realizado por..." },
     //     { title: "Curso de CSS", url: "/img/css.svg", description: "O curso CSS é realizado por..." },
