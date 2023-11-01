@@ -1,5 +1,5 @@
 import { sql } from "@vercel/postgres";
-export const revalidate=0
+
 export default async function Courses() {
     
     // const courses = [
@@ -8,6 +8,7 @@ export default async function Courses() {
     //     { title: "Curso de JS", url: "/img/js.svg", description: "O curso JSS é realizado por..." }
     // ]
     const { rows } = await sql`SELECT * from courses`;
+    console.log(rows)
     return (
         <main className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <div className="md:col-span-2 lg:col-span-3 mt-4 text-white text-center">
